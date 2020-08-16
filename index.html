@@ -1,5 +1,5 @@
-<!DOCTYPE html> 
-<html>
+<!DOCTYPE html>  
+<html> 
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -18,20 +18,20 @@
 <link type="text/css" rel="stylesheet" href="css/main.css" />
 <script src="js/jquery.min.js"></script>
 <script src="js/common.js"></script>
-<script type="text/javascript" src="layer_mobile/layer.js"></script>
+<script type="text/javascript" src="layer_mobile/layer.js"></script> 
 <style>
 .title {
-    font-size
+    font-size: 100%;
     color: #fff;
 }
 .header {
     background-color:  #448bff;
-    padding
+    padding: 1%;
 }
-.sidebar{float:center;
-width:100%;
-text-align: center;
-position: relative;
+.sidebar{float:center; 
+	width:100%; 
+	text-align: center; 
+	position: relative;
 }
 
 .navbar-header {
@@ -42,7 +42,7 @@ position: relative;
     height: 44px;
     line-height: 44px;
     text-align: left;
-    border-bottom
+    border-bottom: 1px solid #c8c7cc;
     background-color: #00cc33;;
     z-index: 999;
 }
@@ -54,15 +54,15 @@ position: relative;
 }
 .comBox{
     width:100%;
-    letter-spacing
+    letter-spacing:2px;
 }
-.course{ 
+.course{  
     border-radius: 5px;
 }
 .content-inp{
    line-height:26px;
    height:26px;
-   border-bottom
+   border-bottom:1px solid #ccc;
    width:90%;
    padding-left:3px;
    color:#999;
@@ -87,7 +87,7 @@ position: relative;
 <body>
 <form name="baseForm" method="post" action="/index.do">
    <nav class="navbar-header" id="navbar-header">
-      <div class="navbar-tlt" style="line-height:44px;height:44px;backgroundcolor:#666;font-sizeletter-spacingtext-align:center;">扫码结果</div>
+      <div class="navbar-tlt" style="line-height:44px;height:44px;background:#efefef;color:#666;font-size: 18px;letter-spacing: 2px;text-align:center;">扫码结果</div>
    </nav>
     <div class="content">
        <div class='comBox'>
@@ -100,25 +100,38 @@ position: relative;
                <p class='courseUnder' style="color:#000;margin-top:10px;"><span><font color="#ff3300">*</font>手机号码：</span></p>
                <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="sjhm" id="sjhm" class="content-inp" value="18361272323" readonly/></span></p>
                <p class='courseUnder' style="color:#000;margin-top:10px;"><span><font color="#ff3300">*</font>出校日期：</span></p>
-               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="cxrq" id="cxrq" class="content-inp" value="2020-08-15 12" readonly/></span></p>
+               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="cxrq" id="cxrq" class="content-inp" value="2020-08-16" readonly/></span></p>
                <p class='courseUnder' style="color:#000;margin-top:10px;"><span><font color="#ff3300">*</font>返校日期：</span></p>
-               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="fxrq" id="fxrq" class="content-inp" value="2020-08-15 21" readonly/></span></p>
+               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="fxrq" id="fxrq" class="content-inp" value="2020-08-16" readonly/></span></p>
                <p class='courseUnder' style="color:#000;margin-top:10px;"><span><font color="#ff3300">*</font>扫码结果：</span></p>
-               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="smjg" id="smjg" class="content-inp" style="color:#ff0000;font-weight:600;" value="允许进校" readonly/></span></p>
+               <p class='courseUnder' style="padding-left:30px;"><span><input style="color:#cc0000" type="text"  name="shzt" id="shzt" class="content-inp" value="允许进校" readonly/></span></p>
                <p class='courseUnder' style="color:#000;margin-top:10px;"><span><font color="#ff3300">*</font>扫码时间：</span></p>
-               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="smsj" id="smsj" class="content-inp" value="2020-08-15 20:33:59" readonly/></span></p>
+               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="shsj" id="shsj" class="content-inp" value="2020-08-16 18:26:36" readonly/></span></p>
+               <p class='courseUnder' id="shyj_tlt" style="color:#000;margin-top:10px;display:none"><span><font color="#ff3300">*</font>审核意见：</span></p>
+               <p class='courseUnder' id="shyj_inp" style="padding-left:30px;display:none;"><span><input type="text" name="shyj" id="shyj" class="content-inp" value="" readonly/></span></p>
              </div>
-             <div style="width:80px; line-height:48px;height:48px;backgroundmargin-top:30px;" id="btn_div">
-               <div style="line-height:36px;height:36px;width:80px;float:left;backgroundcolor: #fff;border-radius: 3px;box-shadow: 2px 2px 10px #c3d3ea, -2px -2px 10px #c3d3ea;text-align:center;margin-top:8px;" onclick="referForm('leaveSchoolApp.do?method=show')"><i class='icon-arrow-left' style='font-size'></i>返回</div>
+             <div style="width:80px; line-height:48px;height:48px;background:#fff;margin-top:30px;" id="btn_div">
+               <div style="line-height:36px;height:36px;width:80px;float:left;background: #006699;color: #fff;border-radius: 3px;box-shadow: 2px 2px 10px #c3d3ea, -2px -2px 10px #c3d3ea;text-align:center;margin-top:8px;" onclick="referForm('leaveSchoolApp.do?method=show')"><i class='icon-arrow-left' style='font-size:14px;'></i>返回</div>
              </div>
           </div>
        </div>
-   
-</div>
+    
+	</div>
 <script>
   $(function(){
-  $("#btn_div").css({"margin-left":($(window).width()-80)/2});
+	  $("#btn_div").css({"margin-left":($(window).width()-80)/2});	 
+	  if($("#shzt").val() ==  "1"){
+		  $("#shzt").val("审核通过");
+		  $("#shzt").css({"color":"#cc0000"});
+	  }else if($("#shzt").val() ==  "2"){
+		  $("#shzt").val("退回");
+		  $("#shyj_tlt").show();
+		  $("#shyj_inp").show();
+	  }else{
+		  $("#shzt").val("未审核");
+	  }
   })
+  
 </script>
 </form>
 </body>
