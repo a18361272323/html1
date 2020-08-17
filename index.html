@@ -1,0 +1,135 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>  
+<html> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<meta content="all" name="robots" />
+<meta name="author" content="作者信息" />
+<meta name="Copyright" content="版权信息" />
+<meta name="description" content="站点介绍" />
+<meta name="keywords" content="站点关键词" />
+<meta name="applicable-device" content="mobile" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="css/main.css" />
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript" src="layer_mobile/layer.js"></script> 
+<style>
+.title {
+    font-size: 100%;
+    color: #fff;
+}
+.header {
+    background-color:  #448bff;
+    padding: 1%;
+}
+.sidebar{float:center; 
+	width:100%; 
+	text-align: center; 
+	position: relative;
+}
+
+.navbar-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: left;
+    border-bottom: 1px solid #c8c7cc;
+    background-color: #00cc33;;
+    z-index: 999;
+}
+.navbar-tlt{
+    width:100%;
+}
+.content{
+    padding-top:40px;
+}
+.comBox{
+    width:100%;
+    letter-spacing:2px;
+}
+.course{  
+    border-radius: 5px;
+}
+.content-inp{
+   line-height:26px;
+   height:26px;
+   border-bottom:1px solid #ccc;
+   width:90%;
+   padding-left:3px;
+   color:#999;
+   border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+}
+.courseUnder{
+   line-height:30px;
+}
+.courseUnder>span{
+    margin-top:8px;
+}
+.courseRadio{
+    height:18px;
+    width:18px;
+    margin-top:-1px;
+}
+</style>
+
+</head>
+<body>
+<form name="baseForm" method="post" action="/index.do">
+   <nav class="navbar-header" id="navbar-header">
+      <div class="navbar-tlt" style="line-height:44px;height:44px;background:#efefef;color:#666;font-size: 18px;letter-spacing: 2px;text-align:center;">扫码结果</div>
+   </nav>
+    <div class="content">
+       <div class='comBox'>
+          <div class='course'>
+             <div class='partj' style="margin-top:10px;">
+               <p class='courseUnder' style="color:#000;"><span><font color="#ff3300">*</font>学号：</span></p>
+               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="xh" id="xh" class="content-inp" value="2181331" readonly/></span></p>
+               <p class='courseUnder' style="color:#000;margin-top:10px;"><span><font color="#ff3300">*</font>姓名：</span></p>
+               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="xm" id="xm" class="content-inp" value="张超" readonly/></span></p>
+               <p class='courseUnder' style="color:#000;margin-top:10px;"><span><font color="#ff3300">*</font>手机号码：</span></p>
+               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="sjhm" id="sjhm" class="content-inp" value="18361272323" readonly/></span></p>
+               <p class='courseUnder' style="color:#000;margin-top:10px;"><span><font color="#ff3300">*</font>出校日期：</span></p>
+               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="cxrq" id="cxrq" class="content-inp" value="2020-08-15 12" readonly/></span></p>
+               <p class='courseUnder' style="color:#000;margin-top:10px;"><span><font color="#ff3300">*</font>返校日期：</span></p>
+               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="fxrq" id="fxrq" class="content-inp" value="2020-08-15 21" readonly/></span></p>
+               <p class='courseUnder' style="color:#000;margin-top:10px;"><span><font color="#ff3300">*</font>扫码结果：</span></p>
+               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="smjg" id="smjg" class="content-inp" style="color:#ff0000;font-weight:600;" value="允许进校" readonly/></span></p>
+               <p class='courseUnder' style="color:#000;margin-top:10px;"><span><font color="#ff3300">*</font>扫码时间：</span></p>
+               <p class='courseUnder' style="padding-left:30px;"><span><input type="text" name="smsj" id="smsj" class="content-inp" value="2020-08-15 20:33:59" readonly/></span></p>
+             </div>
+             <div style="width:80px; line-height:48px;height:48px;background:#fff;margin-top:30px;margin-left:160px;" id="btn_div">
+               <div style="line-height:36px;height:36px;width:80px;float:left;background: #006699;color: #fff;border-radius: 3px;box-shadow: 2px 2px 10px #c3d3ea, -2px -2px 10px #c3d3ea;text-align:center;margin-top:8px;" onclick="referForm('leaveSchoolApp.do?method=show')"><i class='icon-arrow-left' style='font-size:14px;'></i>返回</div>
+             </div>
+          </div>
+       </div>
+    
+	</div>
+<script>
+  $(function(){
+	  $("#btn_div").css({"margin-left":($(window).width()-80)/2});	 
+  })
+</script>
+</form>
+</body>
+
+</html>
